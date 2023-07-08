@@ -1,0 +1,126 @@
+.Projects {
+    .texture5 {
+        left: 0;
+        height: 65vw;
+        bottom: -30vw;
+        position: absolute;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        overflow: hidden;
+        padding-top: 10vw;
+        flex-direction: column;
+
+        @media (max-width:767px) {
+            padding-top: 18vw;
+        }
+
+        .mySwiper {
+            width: 100%;
+
+            .project {
+                display: flex;
+                padding: 5vw 10vw;
+                position: relative;
+                align-items: center;
+                flex-direction: column;
+
+                @media (max-width:767px) {
+                    padding: 5vw 0;
+                    padding-top: 25vw;
+                    align-items: flex-start;
+                }
+
+                .side {
+                    left: 0;
+                    width: 15%;
+                    display: flex;
+                    position: absolute;
+                    flex-direction: column;
+
+                    @media (max-width:767px) {
+                        top: 0;
+                        width: 100%;
+                    }
+                }
+
+                .img {
+                    max-width: 55%;
+                    min-width: 55%;
+                    max-height: 28vw;
+                    min-height: 28vw;
+                    object-fit: cover;
+
+                    @media (max-width:767px) {
+                        max-width: 80%;
+                        min-width: 80%;
+                        max-height: 60vw;
+                        min-height: 60vw;
+                    }
+                }
+            }
+
+            .swiper-pagination {
+                top: 0;
+                text-align: left;
+                padding-left: 19vw;
+                transform: rotate(90deg);
+                -webkit-transform: rotate(90deg);
+                -moz-transform: rotate(90deg);
+                -ms-transform: rotate(90deg);
+                -o-transform: rotate(90deg);
+
+                @media (max-width:767px) {
+                    padding-top: 28vw;
+                }
+
+                .swiper-pagination-bullet {
+                    opacity: 1;
+                    margin: 0 3vw;
+                    color: white;
+                    font-size: 2vw;
+                    background-color: transparent;
+                    font-family: 'Montserrat', sans-serif;
+                    transform: rotate(-90deg);
+                    -webkit-transform: rotate(-90deg);
+                    -moz-transform: rotate(-90deg);
+                    -ms-transform: rotate(-90deg);
+                    -o-transform: rotate(-90deg);
+
+                    &::before {
+                        content: "0";
+                    }
+
+                    @media (max-width:767px) {
+                        font-size: 4vw;
+                    }
+                }
+
+                .swiper-pagination-bullet-active {
+                    transform: rotate(-90deg) scale(2) translateX(-1vw);
+                    -webkit-transform: rotate(-90deg) scale(2) translateX(-1vw);
+                    -moz-transform: rotate(-90deg) scale(2) translateX(-1vw);
+                    -ms-transform: rotate(-90deg) scale(2) translateX(-1vw);
+                    -o-transform: rotate(-90deg) scale(2) translateX(-1vw);
+
+                    &::before {
+                        content: "-0";
+                    }
+
+                    @media (max-width:767px) {
+                        transform: rotate(-90deg) scale(2) translateX(-2vw);
+                        -webkit-transform: rotate(-90deg) scale(2) translateX(-2vw);
+                        -moz-transform: rotate(-90deg) scale(2) translateX(-2vw);
+                        -ms-transform: rotate(-90deg) scale(2) translateX(-2vw);
+                        -o-transform: rotate(-90deg) scale(2) translateX(-2vw);
+                    }
+                }
+            }
+        }
+    }
+}

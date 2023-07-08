@@ -1,0 +1,131 @@
+.Contacts {
+    .texture4 {
+        right: 0;
+        bottom: -40vw;
+        height: 110vw;
+        position: absolute;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+
+    .wrapper {
+        display: flex;
+        padding-top: 10vw;
+        flex-direction: column;
+
+        @media (max-width:767px) {
+            padding-top: 20vw;
+        }
+
+        .sub-title {
+            padding: 0 25%;
+            text-align: center;
+
+            @media (max-width:767px) {
+                padding: 0;
+            }
+        }
+
+        .forms {
+            gap: 12vw;
+            display: grid;
+            grid-template-columns: repeat(2, 2fr);
+
+            @media (max-width:767px) {
+                gap: 5vw;
+                grid-template-columns: repeat(1, 1fr);
+            }
+
+            .left {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    border-bottom: solid 1px white;
+                }
+
+                .red-line {
+                    border-bottom: solid 1px red;
+                }
+
+                .filters {
+                    display: flex;
+                    flex-direction: column;
+
+                    .filter {
+                        display: flex;
+                        align-items: center;
+
+                        label {
+                            cursor: pointer;
+                        }
+
+                        input {
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+
+            .right {
+                display: flex;
+                flex-direction: column;
+
+                input {
+                    border: none;
+                    outline: none;
+                    background-color: transparent;
+                    border-bottom: solid 1px white;
+                }
+
+                .red-line {
+                    border-bottom: solid 1px red;
+                }
+
+                input::-webkit-inner-spin-button,
+                input::-webkit-outer-spin-button {
+                    -webkit-appearance: none;
+                    margin: 0;
+                }
+
+                input[type=number] {
+                    appearance: 0;
+                    -moz-appearance: 0;
+                }
+
+                textarea {
+                    resize: none;
+                    outline: none;
+                    border: solid 1px white;
+                    background-color: transparent;
+                }
+
+                .btns {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .btn {
+                        cursor: pointer;
+                        padding: 1vw 2vw;
+                        border: solid 1px white;
+                        background-color: transparent;
+
+                        &:hover {
+                            color: black;
+                            background-color: white;
+                        }
+
+                        @media (max-width:767px) {
+                            padding: 2vw 6vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

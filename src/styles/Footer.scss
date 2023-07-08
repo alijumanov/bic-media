@@ -1,0 +1,165 @@
+.Footer {
+    .texture5 {
+        left: 0;
+        top: -35vw;
+        height: 65vw;
+        position: absolute;
+
+        @media (max-width:767px) {
+            display: none;
+        }
+    }
+
+    .wrapper {
+        .top-footer {
+            display: flex;
+            padding-left: 0;
+            padding-right: 0;
+            justify-content: space-between;
+            border-top: solid 1px rgba(255, 255, 255, 0.548);
+            border-bottom: solid 1px rgba(255, 255, 255, 0.578);
+
+            @media (max-width:767px) {
+                flex-direction: column;
+            }
+
+            .left {
+                width: 40%;
+                display: flex;
+                flex-direction: column;
+
+                @media (max-width:767px) {
+                    width: 100%;
+                }
+
+                .name {
+                    font-family: astronomus;
+                }
+            }
+
+            .tools {
+                width: 18%;
+                display: flex;
+                flex-direction: column;
+
+                @media (max-width:767px) {
+                    width: 100%;
+                }
+
+                a {
+                    color: white;
+                    text-decoration: none;
+
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+
+                i {
+                    @media (max-width:767px) {
+                        display: none;
+                    }
+                }
+
+                .tel-icon {
+                    display: flex;
+                    align-items: center;
+
+                    .icon {
+                        width: 1vw;
+                        height: 1vw;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        @media (max-width:767px) {
+                            width: 4vw;
+                            height: 4vw;
+                        }
+                    }
+                }
+            }
+
+            .links {
+                @media (max-width:767px) {
+                    display: none;
+                }
+            }
+
+            .scroll-top {
+                display: flex;
+                cursor: pointer;
+                flex-direction: inherit;
+                align-items: flex-start;
+
+                @media (max-width:767px) {
+                    flex-direction: row;
+                    align-items: center;
+                    margin-top: 4vw;
+                }
+
+                .up-icon {
+                    width: 1vw;
+                    height: 1vw;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    @media (max-width:767px) {
+                        width: 4vw;
+                        height: 4vw;
+                    }
+                }
+
+                .text {
+                    padding-top: 0;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-top: -0.3vw;
+                    border-bottom: solid 1px rgba(255, 255, 255, 0.584);
+                }
+            }
+        }
+
+        .bottom-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            @media (max-width:767px) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .socials {
+                display: flex;
+
+                @media (max-width:767px) {
+                    margin: 3vw 0;
+                }
+
+                .icon {
+                    width: 2.6vw;
+                    height: 2.6vw;
+                    fill: white;
+                    display: flex;
+                    padding: 0.6vw;
+                    border-radius: 50%;
+                    -webkit-border-radius: 50%;
+                    -moz-border-radius: 50%;
+                    -ms-border-radius: 50%;
+                    -o-border-radius: 50%;
+                    align-items: center;
+                    justify-content: center;
+                    border: solid 1px grey;
+
+                    @media (max-width:767px) {
+                        width: 10vw;
+                        height: 10vw;
+                        padding: 2vw;
+                    }
+                }
+            }
+        }
+    }
+}

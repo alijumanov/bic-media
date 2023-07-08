@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import About from './components/About';
+import Modal from './components/Modal';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import HomeRouter from './routes/HomeRouter';
+import Contacts from './components/Contacts';
+import Services from './components/Services';
+import Projects from './components/Projects';
+import AllServices from './components/AllServices';
+import ScrollToTop from './components/ScrollToTop';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
-function App() {
+const App = () => {
+
+  // modal options
+
+  const [showModal, setShowModal] = useState(false);
+
+  function changeModal() {
+    setShowModal(!showModal)
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <ScrollToTop />
+      <Navbar />
+      <Routes>
+        <Route exact path='/' element={<HomeRouter />} />
+        <Route path='/about' element={<About />} />
+        <Route path='/services' element={<AllServices />} />
+        <Route path='/services/:id' element={<Services />} />
+        <Route path='/projects' element={<Projects />} />
+        <Route path='/contacts' element={<Contacts changeModal={changeModal} />} />
+      </Routes>
+      {showModal &&
+        <Modal changeModal={changeModal} />
+      }
+      <Footer />
+    </BrowserRouter>
   );
-}
+};
 
 export default App;
